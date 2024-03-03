@@ -1,0 +1,106 @@
+
+<html lang="en">  
+   <head>
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve the cart items from local storage
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Select the cart list element
+    const cartList = document.getElementById('cart-list');
+
+    // Clear any existing items in the cart list
+    cartList.innerHTML = '';
+
+    // Initialize total to zero
+    let total = 0;
+
+    // Loop through the cart items and add them to the cart list
+    cartItems.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <div>
+                <img src="${item.img}" alt="" class="listCartImg" height="80" width="70">
+                <li>${item.title}</li> <p>${item.price}</p> <p>${item.expiry}</p>
+            </div>
+        `;
+        cartList.appendChild(listItem);
+
+        // Extract numeric value from the price string and add it to the total
+        const numericPrice = parseFloat(item.price.replace('$', '').replace(',', ''));
+        total += numericPrice;
+    });
+
+    // Display the calculated total in the Total section
+    const totalElement = document.getElementById('total');
+    if (totalElement) {
+        totalElement.innerHTML = `Total: <STRONG>$${total.toFixed(2)}</STRONG>`;
+    }
+});
+    </script>
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Qualtia Cart</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="Logo Qualtia.png">
+    </head>
+    <body>
+        <nav>
+            <div class="navTop">
+                <div class="navItem">
+                    <img src="img/navlogo.png" alt="" width="140" height="90">
+                </div>
+                <div class="navItem">
+                    <div class="search">
+                        <input type="text" placeholder="Search..." class="searchInput"> 
+                        <img src="./img/search.png" width="20" height="20" alt="" class="SearchIcon">
+                    </div>
+                </div>
+                <div class="navItem">
+                    <a href="promo.html" class="navItem">
+                        <span class="limitedOffer">Suscribete!</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <h1>Carrito de Compras</h1>
+        <main>
+            <section id="cart-items">
+                <h2>Productos en el Carrito</h2>
+                <ul class="listCart" id="cart-list"></ul>
+            </section>
+            
+            
+            <section id="cart-summary">
+                <h2>Resumen del Carrito</h2>
+                <div id="shipping">
+                    Envío: INCLUIDO
+                </div>
+                <div id="total">
+                    Total: <STRONG>$7,350.99</STRONG>
+                </div>
+                &ThickSpace;
+                <button class="checkout-button" id="checkout-button">Pagar</button>
+            </section>
+        </main>
+        <button id="clear-cart-button">Clear Cart</button>
+        <p class="backHome"><a href="/index.html">HOME</a></p>
+        <script>
+            document.getElementById('clear-cart-button').addEventListener('click', function () {
+                // Clear the cart in local storage
+                localStorage.clear();
+        
+                // Optionally, you can also update the displayed cart on the page
+                const cartList = document.getElementById('cart-list');
+                if (cartList) {
+                    cartList.innerHTML = ''; // Clear the cart list on the page
+                }
+            });
+        
+            // Your other JavaScript code
+        </script>
+    </body>
+</html>

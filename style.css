@@ -1,0 +1,519 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    background-color: #c4f3ff;
+    color: white;
+    padding: 20px 50px
+}
+
+.navTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background-color: rgb(253, 251, 251);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.searchInput{
+    border: none;
+    background-color: transparent;
+}
+
+.searchInput::placeholder{
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+}
+
+.limitedOffer{
+    font-size: 20px;
+    color: rgb(7, 32, 77);
+    cursor: pointer;
+}
+
+.navBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.menuItem{
+    margin-right: 50px;
+    cursor: pointer;
+    color: rgb(36, 75, 145);
+    font-weight: 500;
+}
+
+.slider{
+    background-image: url(/img/wood.jpg);
+    clip-path:  polygon(50% 0%, 100% 0, 100% 43%, 100% 100%, 68% 100%, 32% 100%, 0 86%, 0% 43%, 0 0);
+    overflow: hidden;
+}
+
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+    transition: all 1.5s ease-in-out;
+}
+
+.sliderItem{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slideBg{
+    width: 310px;
+    height: 100%;
+    /*position: absolute;
+    right: 3%;*/
+    background-color: #7da3db;
+}
+
+.sliderImg {
+    z-index: 1;
+}
+
+.sliderTitle{
+    position: absolute;
+    top: 3%;
+    right: 12.5%;
+    font-size: 65px;
+    font-weight: 900;
+    text-align: center;
+    color: darkblue;
+    z-index: 1;
+}
+
+.buyButton{
+    position: absolute;
+    top: 70%;
+    right: 17%;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 15%;
+    border: 2px solid darkblue;
+    color: darkblue;
+    background-color: rgb(245, 245, 244);
+    z-index: 1;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+
+.buyButton:hover{
+    background-color: darkblue;
+    color: #f9fafa;
+    border: rgb(40, 77, 226);
+    font-weight: 700;
+
+}
+
+.sliderItem:nth-child(2) .sliderTitle{
+    font-size: 60px;
+    right: 12%;
+}
+
+.sliderItem:nth-child(3) .sliderTitle{
+    font-size: 40px;
+    right: 13.5%;
+}
+
+.sliderItem:nth-child(4) .sliderTitle{
+    font-size: 33px;
+    right: 12.5%;
+}
+
+.sliderItem:nth-child(5) .sliderTitle{
+    font-size: 60px;
+    right: 14%;
+}
+
+/*.sliderPrice{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    color: darkblue;
+}*/
+
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featureIcon{
+    width: 50px;
+    height: 50px;
+}
+
+.featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.featureDesc{
+    color: gray;
+    width: 50%;
+    height: 100px;
+
+}
+
+.product{
+    height: 80vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path:  polygon(60% 0, 100% 9%, 100% 43%, 100% 95%, 68% 95%, 32% 95%, 0 83%, 0% 43%, 0 0);
+}
+
+.productImg{
+    width: 50%;
+}
+
+.productDetails{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+}
+
+.productTitle{
+    font-weight: 900;
+}
+
+.productDesc{
+    font-style: 24px;
+    color: gray;
+}
+
+.gramaje{
+    display: flex;
+}
+
+.gramaje{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 2%;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+
+.productButton{
+    position: absolute;
+        top: 110%;
+        right: 58.5%;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        border: 2px solid rgb(37, 101, 164);
+        color: rgb(37, 101, 164);
+        background-color: #b3cef7;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .productButton:hover{
+        background-color: white;
+        color: #b3cef7;;
+        font-weight: 500;
+    
+    }
+
+    .product2{
+        height: 80vh;
+        background-color: white;
+        position: relative;
+        clip-path: polygon(67% 0, 99% 14%, 100% 43%, 100% 100%, 68% 100%, 32% 100%, 0 100%, 0% 43%, 0 0);
+    }
+
+    
+    .productTitle2{
+        font-weight: 900;
+    }
+
+    .CarroNav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px; /* Adjust the width as needed */
+        height: 80px; /* Adjust the height as needed */
+        margin: auto; /* This will center the element horizontally */
+        margin-top: 50px;
+        background-color: rgb(170, 229, 250);
+        
+    }
+    .botonCarrito{
+        font-size: 30px;
+        text-align: center;
+        border-radius: 15%;
+        color: black;
+        z-index: 1;
+        cursor: pointer;
+        border: #084c5d;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .carritoCool{
+        background-color: #c4f3ff;
+    }
+
+    .footer{
+        display: flex;
+    }
+    
+    
+    .footerLeft{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+        background-color: rgb(236, 235, 235);
+    }
+
+ 
+
+    .fMenuTitle{
+        font-size: 16px;
+    }
+
+    .fList{
+        padding: 0;
+        list-style: none;
+
+    }
+
+    
+    .fListItem{
+        margin-bottom: 10px;
+        color: gray;
+        cursor: pointer;
+    }
+
+   
+
+    .fInput{
+        padding: 5px;
+    }
+
+    .fButton{
+        padding: 5px;
+        background-color: black;
+        color: white;
+    }
+
+    .fIcons{
+        display: flex;
+    }
+
+    .fIcon{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .copyright{
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    /* Main section styles */
+main {
+    padding: 20px;
+}
+
+#subscription-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#subscription-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.formUsuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombreusuario,
+.correusaruio,
+.desplegarPlan {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.inputusuario,
+.planType {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.subButon {
+    background-color: #1e6ebf;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.subButon:hover {
+    background-color: #15548f;
+}
+
+.subsServ {
+    background-color: #1e6ebf;
+    color: #fff;
+    padding: 20px; 
+    text-align: center; 
+    font-family: "Montserrat", sans-serif; 
+    margin-bottom: 20px; 
+}
+
+.promito{
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: rgb(255, 244, 163);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.promitos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.promito:nth-child(2){
+    background-color: rgb(251, 208, 130);
+    cursor: pointer;
+}
+    
+.promito:nth-child(3){
+    background-color: rgb(138, 216, 228) ;
+    cursor: pointer;
+}
+    
+.discoverPromos {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 50px;
+}
+
+.listCart{
+    list-style: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listCart{
+    font-size: 14px;
+    color: #666;
+    margin-left: 20px;
+}
+
+#subtotal,
+#shipping,
+#total {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+
+.backHome {
+    padding: 1px 25px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    border: 2px solid darkblue;
+    color: darkblue;
+    background-color: rgb(245, 245, 244);
+    z-index: 1;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+
+  .backHome:hover {
+    background-color: #2980b9;
+    color: #fff;
+  }
+
+  .Certimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
